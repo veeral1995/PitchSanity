@@ -1,48 +1,39 @@
-# Video Quickstart for Node.js
+# node-js-getting-started
 
-This application should give you a ready-made starting point for writing your
-own video chatting apps with Twilio Video. Before we begin, we need to collect
-all the credentials we need to run the application:
+A barebones Node.js app using [Express 4](http://expressjs.com/).
 
-Credential | Description
----------- | -----------
-Twilio Account SID | Your main Twilio account identifier - [find it on your dashboard](https://www.twilio.com/user/account/video).
-Twilio Video Configuration SID | Adds video capability to the access token - [generate one here](https://www.twilio.com/user/account/video/profiles)
-API Key | Used to authenticate - [generate one here](https://www.twilio.com/user/account/messaging/dev-tools/api-keys).
-API Secret | Used to authenticate - [just like the above, you'll get one here](https://www.twilio.com/user/account/messaging/dev-tools/api-keys).
+This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
 
-## A Note on API Keys
+## Running Locally
 
-When you generate an API key pair at the URLs above, your API Secret will only
-be shown once - make sure to save this in a secure location, 
-or possibly your `~/.bash_profile`.
+Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
 
-## Setting Up The Node.js Application
-
-Create a configuration file for your application:
-
-```bash
-cp .env.example .env
+```sh
+$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
+$ cd node-js-getting-started
+$ npm install
+$ npm start
 ```
 
-Edit `.env` with the four configuration parameters we gathered from above.
+Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-Next, we need to install our dependencies from npm:
+## Deploying to Heroku
 
-```bash
-npm install
 ```
-
-Now we should be all set! Run the application using the `node` command.
-
-```bash
-node .
+$ heroku create
+$ git push heroku master
+$ heroku open
 ```
+or
 
-Your application should now be running at http://localhost:3000. Send an invite to another user and start video chatting! If you just want to 
-test it you can invite your own identity to video chat with yourself. 
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-![screenshot of chat app](http://i.imgur.com/nVR70FQ.png)
+## Documentation
 
-## License
-MIT
+For more information about using Node.js on Heroku, see these Dev Center articles:
+
+- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
+- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
+- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
+- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
