@@ -1,3 +1,5 @@
+Repository that uses webcam and video chat libraries that randonly connects to other people who are using the applciation. Basically an Omegle for business minds to chat about ideas. 
+
 # node-js-getting-started
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
